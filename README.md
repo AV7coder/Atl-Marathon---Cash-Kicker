@@ -2,8 +2,8 @@
 
 Made with - https://github.com/AV7coder
 
-This app is made for a ATL fest. This app helps you get job and get vacancies for your company.
+This app is made for ATL Marathon. This app helps you to get investors for your company.
 
 It is open-source and as well as free of cost.
 
-We want to generate employment post covid.
+We want to make India get closer to the goals of no poverty.
