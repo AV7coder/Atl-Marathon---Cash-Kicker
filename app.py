@@ -66,7 +66,7 @@ def login():
         user =User.query.filter_by(email=email).first()
         if user and password==user.password:
             login_user(user, remember=True)
-            flash(f'Welcome to back Job Finder {email}', 'success')
+            flash(f'Welcome back to Cash Kicker {email}', 'success')
             return redirect('/')
         else:
             flash(f'Invalid Credentials.', 'warning')
@@ -86,7 +86,7 @@ def register():
         try:
             db.session.add(user)
             db.session.commit()
-            flash(f'Welcome to Job Finder {email}', 'success')
+            flash(f'Welcome to Cash Kicker {email}', 'success')
             return redirect('/login')
             print('Register success')
             print(email)
