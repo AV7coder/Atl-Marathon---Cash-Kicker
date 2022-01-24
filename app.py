@@ -39,7 +39,7 @@ class User(UserMixin,db.Model):
     password = db.Column(db.String(80), nullable=False)
     fname=db.Column(db.String(100), nullable=False)
     lname=db.Column(db.String(100), nullable=False)
-    type =db.Column(db.String(100), nullable=False)
+    usertype =db.Column(db.String(100), nullable=False)
     db.relationship('JobReqd')
     db.relationship('AvailableJob')
     def __repr__(self):
@@ -82,19 +82,21 @@ def register():
         password = request.form.get('password')
         fname = request.form.get('first_name')
         lname = request.form.get('last_name')
-        user=User(email=email,password=password,fname=fname,lname=lname)
+        usertype = request.form.get('user_type')
+        user=User(email=email,password=password,fname=fname,lname=lname,usertype=usertype)
         try:
             db.session.add(user)
             db.session.commit()
             flash(f'Welcome to Cash Kicker {email}', 'success')
-            return redirect('/login')
             print('Register success')
             print(email)
             print(password)
             print(fname)
             print(lname)
+            print(usertype)
+            return redirect('/login')
         except:
-            flash('Error Occured', "warning")
+            flash(f'Error Occured', "warning")
             return redirect('/register')
     return render_template('register.html')
 
