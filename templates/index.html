@@ -28,7 +28,7 @@
         }
         
         h2 {
-            color: rgb(255, 255, 255);
+            color: #a89554 ;
         }
         
         h1 {
@@ -40,7 +40,7 @@
         }
         
         .neonText {
-            color: rgb(5, 21, 160);
+            color: #7544ad;
             text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
             text-align: center;
         }
@@ -63,17 +63,18 @@
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
+            <br><br>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div>
-                        <img src="{{url_for('static', filename='startups-home.jpeg')}}" class="d-block w-100 l-55" style="border: solid 12px black;" width="100%">
+                        <img src="{{url_for('static', filename='startups-home.jpeg')}}" class="d-block w-100 l-55" style="border: solid 12px #cf9415;" width="100%">
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{url_for('static', filename='startup-investor-home.jpeg')}}" class="d-block w-100 l-55" style="border: solid 12px black;" width="100%">
+                    <img src="{{url_for('static', filename='startup-investor-home.jpeg')}}" class="d-block w-100 l-55" style="border: solid 12px #cf9415;" width="100%">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{url_for('static', filename='investor-investing-home.jpeg')}}" class="d-block w-100 l-55" style="border: solid 12px black;" width="50%">
+                    <img src="{{url_for('static', filename='investor-investing-home.jpeg')}}" class="d-block w-100 l-55" style="border: solid 12px #cf9415;" width="50%">
                 </div>
             </div>
 
@@ -85,5 +86,6 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+            <br><br><br><br>
         </div>
         {%endblock body%}
